@@ -50,7 +50,7 @@ public class RobotTemplate extends SimpleRobot {
         double sensorread;
         
         
-        //Camera code found on Chief Delphi
+        //Camera code found on Chief Delphi.
         AxisCamera camera = AxisCamera.getInstance();
         
     
@@ -100,7 +100,7 @@ public class RobotTemplate extends SimpleRobot {
      * This function is called once each time the robot enters operator control.
      */
     public void operatorControl() {
-        
+
         while (isOperatorControl() && isEnabled())
         {
              
@@ -109,17 +109,16 @@ public class RobotTemplate extends SimpleRobot {
              
             // left = leftStick.getAxis(Joystick.AxisType.kY);
              //sensorread = sensor.getAcceleration();
-             AxisCamera camera = AxisCamera.getInstance();
-             DriverStationLCD.getInstance().updateLCD();
- 
-              
              
+             
+ 
+                   
              //drive.arcadeDrive(thirdstick);
              
              //sensorread = sensor.getAcceleration();
-             System.out.println(sensorread);
+             
              //System.out.println(right);
              Timer.delay(0.005);
         }
-    }
+    }   
 }
