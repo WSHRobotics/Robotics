@@ -51,7 +51,7 @@ public class RobotTemplate extends SimpleRobot {
         
         
         //Camera code found on Chief Delphi
-        //AxisCamera camera = AxisCamera.getInstance();
+        AxisCamera camera = AxisCamera.getInstance();
         
     
 
@@ -67,7 +67,7 @@ public class RobotTemplate extends SimpleRobot {
         
         drive.tankDrive(1, 1);
         
-        //DriverStationLCD.getInstance().updateLCD();
+        DriverStationLCD.getInstance().updateLCD();
         
         Timer.delay(500);
         drive.tankDrive(0, 0);
