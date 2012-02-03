@@ -1,14 +1,13 @@
 package edu.wpi.first.wpilibj.templates;
 
+import edu.wpi.first.wpilibj.DriverStationLCD;
 
-public class Info extends RobotTemplate{
+
+public class Info extends Thread{
+    double sensorread;
+    
     public void run(){
         DriverStationLCD.getInstance().updateLCD();
-        System.out.println(sensorread);
-    }
-    
-    public static void main(){
-        (new Info().start());
-        
+        System.out.println("TEST");
     }
 }

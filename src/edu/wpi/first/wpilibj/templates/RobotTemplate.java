@@ -21,6 +21,7 @@ import edu.wpi.first.wpilibj.DriverStationLCD;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.Gyro;
 import edu.wpi.first.wpilibj.camera.AxisCamera;
+import edu.wpi.first.wpilibj.image.*;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -49,6 +50,7 @@ public class RobotTemplate extends SimpleRobot {
         double left;
         double sensorread;
         
+        Info i = new Info();
         
         //Camera code found on Chief Delphi.
         AxisCamera camera = AxisCamera.getInstance();
@@ -106,11 +108,13 @@ public class RobotTemplate extends SimpleRobot {
              
              
              drive.tankDrive(leftStick, rightStick);
-             
+             i.start();
             // left = leftStick.getAxis(Joystick.AxisType.kY);
              //sensorread = sensor.getAcceleration();
              
+             //Test images
              
+             //
  
                    
              //drive.arcadeDrive(thirdstick);
