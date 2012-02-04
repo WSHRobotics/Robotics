@@ -37,7 +37,7 @@ public class RobotTemplate extends SimpleRobot {
         RobotDrive drive = new RobotDrive(1, 2);
         Joystick leftStick = new Joystick(1);
         Joystick rightStick = new Joystick(2);
-        Joystick thirdstick = new Joystick(3);
+        Joystick controller = new Joystick(3);
 //        private Compressor compressor = new Compressor(1,2);
         Victor motor = new Victor(4);
         AnalogChannel channel = new AnalogChannel(2);
@@ -45,6 +45,9 @@ public class RobotTemplate extends SimpleRobot {
         
         Gyro g = new Gyro(1); 
         int x;
+        
+        double leftc;
+        double rightc;
         
 
         double left;
@@ -106,9 +109,16 @@ public class RobotTemplate extends SimpleRobot {
         while (isOperatorControl() && isEnabled())
         {
              
+             //NORMAL DRIVE
+             //drive.tankDrive(leftStick, rightStick);
+             //i.start();
              
-             drive.tankDrive(leftStick, rightStick);
-             i.start();
+             //CONTROLLER DRIVE
+            
+            leftc = controller.getRawAxis(2)*-1;
+            rightc = controller.getRawAxis(5)*-1; 
+            
+            drive.tankDrive(leftc,rightc);
             // left = leftStick.getAxis(Joystick.AxisType.kY);
              //sensorread = sensor.getAcceleration();
              
